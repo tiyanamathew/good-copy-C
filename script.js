@@ -69,15 +69,7 @@ function searchCity(city) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-function showTemperature(response) {
-  let cityElement = document.querySelector("#city");
-  let temperatureElement = document.querySelector("#current-temperature");
-  let messageOutput = document.querySelector(`.sunny`);
-  let temperature = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = temperature;
-  messageOutput.innerHTML = updateMessage(temperature);
-}
+
 function showTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#current-temperature");
